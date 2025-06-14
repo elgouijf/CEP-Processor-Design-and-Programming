@@ -1,0 +1,14 @@
+Semaine du 10 Mars 2025 : 
+    - Implémentation de l'instruction lui
+    - Test de l'instruction lui
+    - Implémentation de l'instruction addi
+    - Test de l'instruction addi => addi.s
+
+Semaine du 17 Mars 2025 :
+    A faire : 
+    - Implémentation des instructions add, and, or, ori, andi, xor, xori, sub : FAIT
+    - Test de cette famille d'instruction avec compteur.s
+    - Implémentation de sll, srl, sra, srai, slli, srli : FAIT
+    - Test de cette famille d'instructions avec chenillard_minimaliste.s 
+    - Implémentation de l'instruction auipc
+    - Test de l'instruction auipc

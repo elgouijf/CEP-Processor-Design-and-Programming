@@ -1,0 +1,2544 @@
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/bigsoft/Xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /bigsoft/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab tb_autotest -cc gcc -initfile=/bigsoft/Xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini -L xpm -nolog -debug typical -generic_top mutant=0 
+Multi-threading is on. Using 4 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_textio
+Compiling package work.pkg
+Compiling package work.txt_util
+Compiling architecture rtl of entity work.CPU_PC [cpu_pc_default]
+Compiling architecture rtl of entity work.CPU_CSR [\CPU_CSR(interrupt_vector="00000...]
+Compiling architecture rtl of entity work.CPU_CND [cpu_cnd_default]
+Compiling architecture rtl of entity work.CPU_PO [\CPU_PO(reset_vector="0000000000...]
+Compiling architecture rtl of entity work.CPU [\CPU(reset_vector="0000000000000...]
+Compiling architecture rtl of entity work.PROC_bus [\PROC_bus(n_slave=3,base=("00000...]
+Compiling architecture behavioral of entity work.RAM32 [\RAM32(memory_size=32768,file_na...]
+Compiling architecture rtl of entity work.IP_ITpush [ip_itpush_default]
+Compiling architecture rtl of entity work.IP_PLIC [ip_plic_default]
+Compiling architecture rtl of entity work.IP_CLINT [ip_clint_default]
+Compiling architecture behavior of entity work.tb_autotest
+Built simulation snapshot work.tb_autotest
+
+****** xsim v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/work.tb_autotest/xsim_script.tcl
+# xsim {work.tb_autotest} -wdb {trace.wdb} -autoloadwcfg -tclbatch {/user/3/.base/elarabim/home/Projet_CEP/config/autotest.xsim.tcl}
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source /user/3/.base/elarabim/home/Projet_CEP/config/autotest.xsim.tcl
+## if {[info exists ::env(TESTS)]} {
+## 	set string_test $env(TESTS)
+## } else {
+## 	set string_test 
+## }
+## set tests [regexp -all -inline -- {\S+} $string_test]
+## puts $string_test
+ addi  add  andi  and  auipc  beq  bge  bgeu  blt  bltu  bne  csrrci  csrrc  csrrsi  csrrs  csrrwi  csrrw  jalr  jal  lb  lbu  lh  lhu  lui  lw  ori  or  rebouclage  sb  sh  slli  sll  slti  sltiu  slt  sltu  srai  sra  srli  srl  sub  sw  xori  xor
+## puts $tests
+addi add andi and auipc beq bge bgeu blt bltu bne csrrci csrrc csrrsi csrrs csrrwi csrrw jalr jal lb lbu lh lhu lui lw ori or rebouclage sb sh slli sll slti sltiu slt sltu srai sra srli srl sub sw xori xor
+## foreach test $tests {
+## 	put "Preparing test: ${test}"
+## 	file delete test_default.out test_default.irq test_default.setup test_default.mem
+## 	file link -symbolic test_default.out   ${test}/test_default.out
+## 	file link -symbolic test_default.irq   ${test}/test_default.irq
+## 	file link -symbolic test_default.setup ${test}/test_default.setup
+## 	file link -symbolic test_default.mem   ../mem/${test}.mem
+## 
+## 	put "Running test: ${test}"
+## 	restart
+## 	run -all
+## 	file copy -force test_default.res  ${test}
+## 	file copy -force test_default.test ${test}
+## }
+Preparing test: addi
+Running test: addi
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00000F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00908F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00A00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = FFB08F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00500093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FF908F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = FFE00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = FFD08F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 01400093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = FEC08F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 7FF00F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 80000F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000000A  get : 0x0000000A
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000005  get : 0x00000005
+Time: 180 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFFFFE  get : 0xFFFFFFFE
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFFFFB  get : 0xFFFFFFFB
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 360 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x000007FF  get : 0x000007FF
+Time: 390 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFF800  get : 0xFFFFF800
+Time: 420 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 420 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 420 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 420 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: add
+Running test: add
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00000FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00A00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00008FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = FF600093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00008FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00200093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00300113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 00208FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = FFE00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = FFD00113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00208FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 01400093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = FEC00113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00208FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 00A00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = FFB00113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 00208FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 00500093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = FF900113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = 00208FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1044] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000000A  get : 0x0000000A
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFFFF6  get : 0xFFFFFFF6
+Time: 180 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000005  get : 0x00000005
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFFFFB  get : 0xFFFFFFFB
+Time: 360 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 450 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000005  get : 0x00000005
+Time: 540 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFFFFE  get : 0xFFFFFFFE
+Time: 630 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 630 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 630 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 630 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: andi
+Running test: andi
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00107F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00007F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 02600093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 0640FF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = FFD00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 0030FF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000024  get : 0x00000024
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 210 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: and
+Running test: and
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00107FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00007FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 0010FFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 02600093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 06400113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 0020FFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000024  get : 0x00000024
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 240 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: auipc
+Running test: auipc
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00001F97
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00002F97
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00000F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 800F8F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00003F97
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00002000  get : 0x00002000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00003004  get : 0x00003004
+Time: 100 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 140 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFF800  get : 0xFFFFF800
+Time: 170 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00004010  get : 0x00004010
+Time: 200 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 200 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 200 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 200 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: beq
+Running test: beq
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00000F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 000F8463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 002F8F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 001F8F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 001F8F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 130 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000002  get : 0x00000002
+Time: 160 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 160 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 160 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 160 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: bge
+Running test: bge
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00200113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00115263
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00008FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 0020D463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00000FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00008FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = FE10D8E3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = FFE00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = FFF00113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = FE1152E3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = FE20D6E3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 00000FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = FC10DCE3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = FFE00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = 00100113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = FC1156E3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = FC20DAE3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 00000FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = FC10D0E3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1044] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 160 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 230 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 260 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 330 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 400 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 430 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 500 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 570 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 600 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 600 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 600 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 600 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: bgeu
+Running test: bgeu
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00200113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 0020F463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00000FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00100FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00117463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00000FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 00008FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 00007463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 00000FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00008FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 160 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 190 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 260 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 260 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 260 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 260 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: blt
+Running test: blt
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00200113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00114463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00000FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00100FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 0020C463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00000FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 00008FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 00004463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 00000FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00008FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = FFE00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = FFF00113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = FC114EE3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 00000FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = FE0046E3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 00100193
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = FFE00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 00100113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = FC1142E3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1044] = 00300FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1045] = FC004AE3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1046] = 00000FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1047] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 160 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 190 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 260 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 330 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 360 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 490 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 690 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 760 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 760 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 760 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 760 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: bltu
+Running test: bltu
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00200113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 0020E263
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00008FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00116463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00000FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Error: STD_LOGIC_1164.HREAD Error: Read a '.', expected a Hex character (0-F).
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = uuuuuuuu
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 160 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 230 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 230 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 230 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 230 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: bne
+Running test: bne
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00000F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00200093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 001F9463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 002F8F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 001F8F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 001F8F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 160 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000002  get : 0x00000002
+Time: 190 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 190 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 190 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 190 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: csrrci
+Running test: csrrci
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 3000D173
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 300071F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 7FF00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 30009273
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 3007F1F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 300051F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 3050D173
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 305071F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 6FF00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = 30509273
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 3057F1F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 305051F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1044] = 00100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1045] = 3040D173
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1046] = 304071F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1047] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1048] = 4FF00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1049] = 30409273
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1050] = 3047F1F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1051] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1052] = 304051F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1053] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1054] = 00100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1055] = 3050D173
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1056] = 305071F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1057] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1058] = 3FF00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1059] = 30509273
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1060] = 3057F1F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1061] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1062] = 305051F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1063] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1064] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x000007FF  get : 0x000007FF
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x000007F0  get : 0x000007F0
+Time: 330 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 450 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x000006FC  get : 0x000006FC
+Time: 570 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x000006F0  get : 0x000006F0
+Time: 630 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 750 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x000004FF  get : 0x000004FF
+Time: 870 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x000004F0  get : 0x000004F0
+Time: 930 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 1050 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x000003FC  get : 0x000003FC
+Time: 1170 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x000003F0  get : 0x000003F0
+Time: 1230 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 1230 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 1230 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 1230 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: csrrc
+Running test: csrrc
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 30009173
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 300031F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 1F00F137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 007FF0B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 30009273
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 300131F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 300011F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 00100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 30509173
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 305031F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = 1F00F137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 006FF0B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 30509273
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 305131F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1044] = 305011F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1045] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1046] = 00100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1047] = 30409173
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1048] = 304031F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1049] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1050] = 1F00F137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1051] = 004FF0B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1052] = 30409273
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1053] = 304131F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1054] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1055] = 304011F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1056] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1057] = 00100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1058] = 34109173
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1059] = 341031F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1060] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1061] = 1F00F137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1062] = 003FF0B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1063] = 34109273
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1064] = 341131F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1065] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1066] = 341011F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1067] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1068] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x007FF000  get : 0x007FF000
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x007F0000  get : 0x007F0000
+Time: 360 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 480 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x006FF000  get : 0x006FF000
+Time: 630 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x006F0000  get : 0x006F0000
+Time: 690 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 810 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x004FF000  get : 0x004FF000
+Time: 960 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x004F0000  get : 0x004F0000
+Time: 1020 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 1140 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x003FF000  get : 0x003FF000
+Time: 1290 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x003F0000  get : 0x003F0000
+Time: 1350 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 1350 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 1350 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 1350 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: csrrsi
+Running test: csrrsi
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 3000D173
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 300061F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 3000D273
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 300161F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 300011F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 3050D173
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 305061F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 3050D273
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 305261F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 305011F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 3040D173
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = 304061F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 3040D273
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 304361F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = 304011F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1044] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1045] = 3410D173
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1046] = 341061F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1047] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1048] = 3410D273
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1049] = 341461F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1050] = 341011F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1051] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1052] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000003  get : 0x00000003
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 330 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000004  get : 0x00000004
+Time: 450 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 540 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000007  get : 0x00000007
+Time: 660 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 750 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000008  get : 0x00000008
+Time: 870 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 870 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 870 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 870 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: csrrs
+Running test: csrrs
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 30009173
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 300021F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00200113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 30009273
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 300121F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 300011F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 30509173
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 305021F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 00400113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = 00100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 30509273
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 305121F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 305011F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1044] = 00100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1045] = 30409173
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1046] = 304021F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1047] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1048] = 00600113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1049] = 00100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1050] = 30409273
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1051] = 304121F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1052] = 304011F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1053] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1054] = 00100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1055] = 34109173
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1056] = 341021F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1057] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1058] = 00800113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1059] = 00100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1060] = 34109273
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1061] = 341121F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1062] = 341011F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1063] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1064] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000003  get : 0x00000003
+Time: 330 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 450 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000004  get : 0x00000004
+Time: 630 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 750 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000007  get : 0x00000007
+Time: 930 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 1050 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000008  get : 0x00000008
+Time: 1230 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 1230 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 1230 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 1230 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: csrrwi
+Running test: csrrwi
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 3001D173
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 300011F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 3053D173
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 305011F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 3047D173
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 304011F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 3415D173
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 341011F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000003  get : 0x00000003
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000004  get : 0x00000004
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000000F  get : 0x0000000F
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000008  get : 0x00000008
+Time: 390 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 390 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 390 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 390 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: csrrw
+Running test: csrrw
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00300093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 30009173
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 300011F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00700093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 30509173
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 305011F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 00F00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 30409173
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 304011F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 00900093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 30509173
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 305011F3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = 00018F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000003  get : 0x00000003
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000004  get : 0x00000004
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000000F  get : 0x0000000F
+Time: 390 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000008  get : 0x00000008
+Time: 510 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 510 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 510 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 510 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: jalr
+Running test: jalr
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00001FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00CF8FE7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00500F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00400F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00001FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 010F8F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FF0F8FE7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00001000  get : 0x00001000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00001008  get : 0x00001008
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000004  get : 0x00000004
+Time: 130 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00001000  get : 0x00001000
+Time: 160 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00001010  get : 0x00001010
+Time: 190 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000101C  get : 0x0000101C
+Time: 220 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 220 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 220 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 220 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: jal
+Running test: jal
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00400FEF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00500F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00400FEF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 002F8F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00001004  get : 0x00001004
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000005  get : 0x00000005
+Time: 100 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000100C  get : 0x0000100C
+Time: 130 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 130 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 130 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 130 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: lb
+Running test: lb
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 07F00113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 0020A023
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = F8000113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 0020A223
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = FFF00113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 0020A423
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 00100113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 0020A623
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 0FF00113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 0020A823
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 00008F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 00408F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00808F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 00C08F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = 01008F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x0000007F  get : 0x0000007F
+Time: 510 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFFF80  get : 0xFFFFFF80
+Time: 560 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFFFFF  get : 0xFFFFFFFF
+Time: 610 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 660 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFFFFF  get : 0xFFFFFFFF
+Time: 710 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 710 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 710 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 710 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: lbu
+Running test: lbu
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 0FF00113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 0020A023
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00100113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 0020A223
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 10000113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 0020A423
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 0000CF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 0040CF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 0080CF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x000000FF  get : 0x000000FF
+Time: 350 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 400 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 450 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 450 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 450 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 450 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: lh
+Running test: lh
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00008137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = FFF10113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 0020A023
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = FFFF8137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 0020A223
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FFF00113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 0020A423
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 00100113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 0020A623
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 0000A137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = C4010113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 0020A823
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00009F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 00409F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = 00809F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 00C09F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 01009F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00007FFF  get : 0x00007FFF
+Time: 570 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFF8000  get : 0xFFFF8000
+Time: 620 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFFFFF  get : 0xFFFFFFFF
+Time: 670 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 720 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFF9C40  get : 0xFFFF9C40
+Time: 770 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 770 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 770 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 770 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: lhu
+Running test: lhu
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00010137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = FFF10113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 0020A023
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00100113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 0020A223
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00011137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 17010113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 0020A423
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 0000DF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 0040DF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 0080DF83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x0000FFFF  get : 0x0000FFFF
+Time: 410 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 460 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00001170  get : 0x00001170
+Time: 510 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 510 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 510 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 510 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: lui
+Running test: lui
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00000FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = FFFFFFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 12345FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFF000  get : 0xFFFFF000
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 120 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: lw
+Running test: lw
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00001F37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 000F2F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 004F2F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 005F2F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 008F0F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = FF8F2F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00001F37  get : 0x00001F37
+Time: 110 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x000F2F83  get : 0x000F2F83
+Time: 160 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x000F2F83  get : 0x000F2F83
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00001F37  get : 0x00001F37
+Time: 290 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 290 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 290 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 290 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: ori
+Running test: ori
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00106F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 001FEF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00006F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 02600093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 0640EF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = FFD00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 0030EF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000066  get : 0x00000066
+Time: 180 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFFFFF  get : 0xFFFFFFFF
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 240 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: or
+Running test: or
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00106FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00006FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 0010EFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 02600093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 06400113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 0020EFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000066  get : 0x00000066
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 240 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: rebouclage
+Running test: rebouclage
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = FFFFFFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 0FFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 12345FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0xFFFFF000  get : 0xFFFFF000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFF000  get : 0xFFFFF000
+Time: 140 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 140 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 140 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 140 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: sb
+Running test: sb
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 07F00113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00208023
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00008223
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = F8000113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00208423
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 09600113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 00208623
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = F3800113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 00208823
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00008F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 00408F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 00808F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00C08F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 01008F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x0000007F  get : 0x0000007F
+Time: 480 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 530 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFFF80  get : 0xFFFFFF80
+Time: 580 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFFF96  get : 0xFFFFFF96
+Time: 630 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000038  get : 0x00000038
+Time: 680 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 680 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 680 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 680 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: sh
+Running test: sh
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 000010B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00008137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = FFF10113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00209023
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00009223
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = FFFF8137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00209423
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 00009137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 8B810113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 00209623
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = FFFF7137
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 74810113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 00209823
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00009F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 00409F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = 00809F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 00C09F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 01009F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00007FFF  get : 0x00007FFF
+Time: 570 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 620 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFF8000  get : 0xFFFF8000
+Time: 670 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFF88B8  get : 0xFFFF88B8
+Time: 720 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00007748  get : 0x00007748
+Time: 770 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 770 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 770 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 770 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: slli
+Running test: slli
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 0FF00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00409F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = F0100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00609F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000FF0  get : 0x00000FF0
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFC040  get : 0xFFFFC040
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 150 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: sll
+Running test: sll
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 01F00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00100113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00209FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00200113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00209FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00500113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00209FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 00009FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x0000003E  get : 0x0000003E
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000007C  get : 0x0000007C
+Time: 180 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x000003E0  get : 0x000003E0
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000001F  get : 0x0000001F
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 270 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: slti
+Running test: slti
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00300093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 0000AF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 0040AF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 0030AF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = FF900093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 0000AF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FF10AF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = FF90AF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 00200093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = FFF0AF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = FFE00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 0010AF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 330 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 390 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 390 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 390 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 390 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: sltiu
+Running test: sltiu
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00300093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 0000BF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 0040BF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 0030BF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 150 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: slt
+Running test: slt
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 01800093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00500113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00112FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 0020AFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 150 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: sltu
+Running test: sltu
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00300093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 0000BFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00400113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 0020BFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 0010BFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 180 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 180 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 180 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 180 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: srai
+Running test: srai
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 0FF00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 4040DF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = F0100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 4060DF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x0000000F  get : 0x0000000F
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFFFFC  get : 0xFFFFFFFC
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 150 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: sra
+Running test: sra
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 0FF00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00400113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 4020DFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = F0100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00600113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 4020DFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x0000000F  get : 0x0000000F
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFFFFC  get : 0xFFFFFFFC
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 210 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: srli
+Running test: srli
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 3E000093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 0010DF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 3E000093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 0020DF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 3E000093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 0050DF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 3E000093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 0000DF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x000001F0  get : 0x000001F0
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x000000F8  get : 0x000000F8
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000001F  get : 0x0000001F
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x000003E0  get : 0x000003E0
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 270 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: srl
+Running test: srl
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 3E000093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00100113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 0020DFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 3E000093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00200113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 0020DFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 3E000093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 00500113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 0020DFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 3E000093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 0000DFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x000001F0  get : 0x000001F0
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x000000F8  get : 0x000000F8
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000001F  get : 0x0000001F
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x000003E0  get : 0x000003E0
+Time: 360 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 360 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 360 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 360 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: sub
+Running test: sub
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00A00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00500113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 40208FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 40110FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = F9C00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = FCE00113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 40208FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 40110FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 00700093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 40108FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00700113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 40110FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 40208FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = FF900093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 40108FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = FF900113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 40110FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 40208FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 00300093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = 40008FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1044] = 40100FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1045] = FFD00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1046] = 40008FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1047] = 40100FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1048] = 40000FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1049] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000005  get : 0x00000005
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFFFFB  get : 0xFFFFFFFB
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFFFCE  get : 0xFFFFFFCE
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000032  get : 0x00000032
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 330 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 390 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 420 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 480 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 540 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 570 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000003  get : 0x00000003
+Time: 630 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFFFFD  get : 0xFFFFFFFD
+Time: 660 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFFFFD  get : 0xFFFFFFFD
+Time: 720 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000003  get : 0x00000003
+Time: 750 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 780 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 780 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 780 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 780 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: sw
+Running test: sw
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00500093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00001A37
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 001A2023
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 000A2F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 008A0A13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00A00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 001A2023
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 000A2F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 00900093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = FE1A2C23
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = FF8A2F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = FF8A0A13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 00700093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 001A2423
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 008A2F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000005  get : 0x00000005
+Time: 190 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000000A  get : 0x0000000A
+Time: 350 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000009  get : 0x00000009
+Time: 480 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000007  get : 0x00000007
+Time: 640 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 640 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 640 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 640 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: xori
+Running test: xori
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 0FF00093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 0000CF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00104F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 0FF0CF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00004F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 0A300093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 0C90CF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x000000FF  get : 0x000000FF
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 180 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000006A  get : 0x0000006A
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 240 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: xor
+Running test: xor
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 0000CFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00104FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00004FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 0010CFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 01800093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 03500113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 0020CFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 02100093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 02200113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 0020CFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__47  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 180 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000002D  get : 0x0000002D
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000003  get : 0x00000003
+Time: 360 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 360 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 360 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd
+$finish called at time : 360 ns : File "/user/3/.base/elarabim/home/Projet_CEP/vhd/bench/tb_autotest.vhd" Line 206
+## exit
+INFO: [Common 17-206] Exiting xsim at Sun Apr 27 14:30:47 2025...
