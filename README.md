@@ -61,32 +61,32 @@ CEP-Processor-Design-and-Programming/
 
 This project includes components that can be synthesized and simulated using Xilinx Vivado. To make full use of the vivado/ directory and testbenches, you should install:
 
-    Vivado Design Suite WebPACK Edition or the full Vivado ML Edition, version 2024.2 or 2025.1.
+Vivado Design Suite WebPACK Edition or the full Vivado ML Edition, version 2024.2 or 2025.1.
 
-        2024.2 is a stable, recent release.
+    2024.2 is a stable, recent release.
 
-        2025.1 is the latest available as of June 4, 2025.
+    2025.1 is the latest available as of June 4, 2025.
 
 ✅ How to Obtain Vivado
 
-    Visit the official AMD/Xilinx download portal and select the Vivado version you need—preferably 2024.2 or 2025.1
-    AMD.
+- Visit the official AMD/Xilinx download portal and select the Vivado version you need—preferably 2024.2 or 2025.1
+AMD.
 
-    Use the WebPACK installer (free, limited-device support) or the ML Edition installer for full device coverage.
+- Use the WebPACK installer (free, limited-device support) or the ML Edition installer for full device coverage.
 
-    Choose your operating system (Windows or Linux) and download the Web Installer for an easier setup with needed device support
-    AMD.
+- Choose your operating system (Windows or Linux) and download the Web Installer for an easier setup with needed device support
+AMD.
 
-    Follow the installation guide (see “Download and Installation” in UG973 for Vivado 2020.2+)
-    youtube.com+9docs.amd.com+9docs.amd.com+9.
+- Follow the installation guide (see “Download and Installation” in UG973 for Vivado 2020.2+)
+youtube.com+9docs.amd.com+9docs.amd.com+9.
 
-After installation, you’ll be able to:
+- After installation, you’ll be able to:
 
-    Run VHDL/Verilog simulations for datapath and control units
+- Run VHDL/Verilog simulations for datapath and control units
 
-    Launch testbenches located in the vivado/ directory
+- Launch testbenches located in the vivado/ directory
 
-    Optionally generate bitstreams for FPGA implementation
+- Optionally generate bitstreams for FPGA implementation
 
 ## 🚀 Getting Started
 
@@ -99,25 +99,25 @@ cd CEP-Processor-Design-and-Programming
 
 ### 2. Read CEP_cdc.pdf
 
-    📄 CEP_cdc.pdf (Project Specification Document) includes:
+📄 CEP_cdc.pdf (Project Specification Document) includes:
 
-        A detailed breakdown on how to use the Makefile
+- A detailed breakdown on how to use the Makefile
 
-        An overview of the processor’s design goals and modular structure
+- An overview of the processor’s design goals and modular structure
 
-        A detailed breakdown of the instruction set architecture (ISA)
+- A detailed breakdown of the instruction set architecture (ISA)
 
-        Execution semantics and control unit behavior
+- Execution semantics and control unit behavior
 
-        Memory layout and register conventions
+- Memory layout and register conventions
 
-        A dedicated section on how to use the Makefile to:
+- A dedicated section on how to use the Makefile to:
 
-            Build the simulator
+    - Build the simulator
 
-            Run custom .cep programs
+    - Run custom .cep programs
 
-            Launch test cases and simulations step-by-step
+    - Launch test cases and simulations step-by-step
 
 This document serves as the single source of truth for both contributors and users of the project. It is strongly recommended to read this file before interacting with the codebase or writing programs for the processor.
 
