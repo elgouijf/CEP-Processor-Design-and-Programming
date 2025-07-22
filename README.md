@@ -1,4 +1,132 @@
-# CEP
+# CEP Processor Design and Programming
+
+A joint educational project aimed at simulating a custom-designed CPU from scratch. This project bridges the gap between hardware and software by modeling both the architecture and its instruction execution logic.
+
+Developed by: [elgouijf](https://github.com/elgouijf) and [elarabim](https://github.com/elarabim)
+
+---
+
+## 📌 Overview
+
+CEP (Custom Educational Processor) is a minimal processor designed to teach fundamental concepts of:
+- Digital logic and CPU architecture
+- Instruction Set Architecture (ISA)
+- Clock cycle-based simulation
+- Low-level programming and control flow
+
+The system is fully simulated in software to allow hands-on testing and debugging of custom programs without physical hardware.
+
+---
+
+## ✨ Features
+
+- Custom-built instruction set (ISA)
+- Register file, ALU, control unit, program counter, and memory simulation
+- Instruction decoder and execution engine
+- Support for branching, arithmetic operations, and more
+- Assembly-like language interpreter for testing
+- Clock-cycle based execution with step-by-step debugging
+- Easy to extend with new opcodes
+
+---
+
+## 🧠 Architecture Breakdown
+
+The CEP processor is composed of:
+
+| Component        | Role                                                                 |
+|------------------|----------------------------------------------------------------------|
+| **Registers**     | General-purpose registers (R0-Rn) used for computation              |
+| **ALU**           | Arithmetic Logic Unit handles all operations like ADD, SUB, AND     |
+| **Control Unit**  | Decodes instructions and manages control signals                    |
+| **Instruction Memory** | Stores the instruction stream                                 |
+| **Data Memory**   | RAM-like storage accessible through load/store instructions         |
+| **Program Counter**| Points to the current instruction                                  |
+| **Clock System**  | Simulates sequential cycles                                         |
+
+---
+
+## 🗂️ File Structure
+
+CEP-Processor-Design-and-Programming/
+├── hardware/ # Hardware simulation: ALU, control unit, memory, etc.
+├── decoder/ # Instruction decoding logic
+├── simulator/ # Execution engine / core CPU simulation loop
+├── programs/ # Sample programs written in CEP-Assembly
+├── include/ # Header files and shared interfaces
+├── tests/ # Unit tests and validation scripts
+└── README.md # You're reading it!
+
+## 🛠️ FPGA Simulation (Optional – Requires Vivado)
+
+This project includes components that can be synthesized and simulated using Xilinx Vivado. To make full use of the vivado/ directory and testbenches, you should install:
+
+    Vivado Design Suite WebPACK Edition or the full Vivado ML Edition, version 2024.2 or 2025.1.
+
+        2024.2 is a stable, recent release.
+
+        2025.1 is the latest available as of June 4, 2025.
+        Wikipedia
+
+✅ How to Obtain Vivado
+
+    Visit the official AMD/Xilinx download portal and select the Vivado version you need—preferably 2024.2 or 2025.1
+    AMD
+    Wikipedia
+    .
+
+    Use the WebPACK installer (free, limited-device support) or the ML Edition installer for full device coverage.
+
+    Choose your operating system (Windows or Linux) and download the Web Installer for an easier setup with needed device support
+    AMD
+    .
+
+    Follow the installation guide (see “Download and Installation” in UG973 for Vivado 2020.2+)
+    youtube.com+9docs.amd.com+9docs.amd.com+9
+    .
+
+After installation, you’ll be able to:
+
+    Run VHDL/Verilog simulations for datapath and control units
+
+    Launch testbenches located in the vivado/ directory
+
+    Optionally generate bitstreams for FPGA implementation
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+Run this in terminal:
+
+git clone https://github.com/elgouijf/CEP-Processor-Design-and-Programming.git
+cd CEP-Processor-Design-and-Programming
+
+### 2. Read CEP_cdc.pdf
+
+    📄 CEP_cdc.pdf (Project Specification Document) includes:
+
+        A detailed breakdown on how to use the Makefile
+
+        An overview of the processor’s design goals and modular structure
+
+        A detailed breakdown of the instruction set architecture (ISA)
+
+        Execution semantics and control unit behavior
+
+        Memory layout and register conventions
+
+        A dedicated section on how to use the Makefile to:
+
+            Build the simulator
+
+            Run custom .cep programs
+
+            Launch test cases and simulations step-by-step
+
+This document serves as the single source of truth for both contributors and users of the project. It is strongly recommended to read this file before interacting with the codebase or writing programs for the processor.
+
+---
 
 ## Instruction Status
 
