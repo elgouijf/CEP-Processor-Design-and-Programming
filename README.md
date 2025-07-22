@@ -66,24 +66,19 @@ This project includes components that can be synthesized and simulated using Xil
         2024.2 is a stable, recent release.
 
         2025.1 is the latest available as of June 4, 2025.
-        Wikipedia
 
 ✅ How to Obtain Vivado
 
     Visit the official AMD/Xilinx download portal and select the Vivado version you need—preferably 2024.2 or 2025.1
-    AMD
-    Wikipedia
-    .
+    AMD.
 
     Use the WebPACK installer (free, limited-device support) or the ML Edition installer for full device coverage.
 
     Choose your operating system (Windows or Linux) and download the Web Installer for an easier setup with needed device support
-    AMD
-    .
+    AMD.
 
     Follow the installation guide (see “Download and Installation” in UG973 for Vivado 2020.2+)
-    youtube.com+9docs.amd.com+9docs.amd.com+9
-    .
+    youtube.com+9docs.amd.com+9docs.amd.com+9.
 
 After installation, you’ll be able to:
 
